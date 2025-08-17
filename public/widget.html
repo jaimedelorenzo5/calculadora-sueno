@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Widget Embebible - Calculadora de Sueño</title>
+  <meta name="description" content="Embebe la Calculadora de Sueño en tu sitio web. Widget gratuito para mejorar el engagement y generar backlinks.">
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LRMP9LBLRR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LRMP9LBLRR');
+  </script>
+  
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6578039396347330"
+       crossorigin="anonymous"></script>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #37474F;
+      background: linear-gradient(135deg, #E3F2FD 0%, #F3E5F5 100%);
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    
+    .header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #FF8A80, #BA68C8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .header p {
+      font-size: 1.2rem;
+      color: #78909C;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .widget-demo {
+      background: white;
+      border-radius: 24px;
+      padding: 40px;
+      margin-bottom: 60px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .demo-title {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 1.5rem;
+      color: #37474F;
+    }
+    
+    .widget-container {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .code-section {
+      background: #1E1E1E;
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 40px;
+      overflow-x: auto;
+    }
+    
+    .code-section h3 {
+      color: #FF8A80;
+      margin-bottom: 20px;
+      font-size: 1.3rem;
+    }
+    
+    .code-section pre {
+      color: #E8EAF6;
+      font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    
+    .code-section code {
+      background: #2D2D2D;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #FF8A80;
+    }
+    
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+    
+    .feature-card {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .feature-card h3 {
+      color: #FF8A80;
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+    
+    .feature-card p {
+      color: #78909C;
+      margin-bottom: 15px;
+    }
+    
+    .feature-card ul {
+      color: #78909C;
+      padding-left: 20px;
+    }
+    
+    .feature-card li {
+      margin-bottom: 8px;
+    }
+    
+    .cta-section {
+      text-align: center;
+      background: white;
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .cta-section h2 {
+      color: #37474F;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+    
+    .cta-section p {
+      color: #78909C;
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+    }
+    
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #FF8A80, #BA68C8);
+      color: white;
+      padding: 15px 30px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 16px rgba(255, 138, 128, 0.3);
+    }
+    
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(255, 138, 128, 0.4);
+    }
+    
+    .footer {
+      text-align: center;
+      margin-top: 60px;
+      color: #78909C;
+    }
+    
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2rem;
+      }
+      
+      .container {
+        padding: 20px;
+      }
+      
+      .widget-demo {
+        padding: 20px;
+      }
+      
+      .code-section {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>🌙 Widget Embebible</h1>
+      <p>Integra la Calculadora de Sueño en tu sitio web y ayuda a tus usuarios a mejorar su descanso mientras generas backlinks de calidad.</p>
+    </header>
+    
+    <div class="widget-demo">
+      <h2 class="demo-title">📱 Vista previa del Widget</h2>
+      <div class="widget-container">
+        <div class="sleep-widget light">
+          <div class="widget-header">
+            <h3>🌙 Calculadora de Sueño</h3>
+            <p>Descubre tu horario ideal para dormir y despertar</p>
+          </div>
+          
+          <div class="widget-form">
+            <div class="mode-toggle">
+              <button class="active">🌅 Me levanto a</button>
+              <button>🌙 Me acuesto a</button>
+            </div>
+            
+            <div class="form-group">
+              <label>⏰ ¿A qué hora quieres despertarte?</label>
+              <input type="time" value="07:00" readonly>
+            </div>
+            
+            <div class="form-group">
+              <label>😴 ¿Cuánto tardas en quedarte dormido?</label>
+              <select readonly>
+                <option>15 minutos</option>
+              </select>
+            </div>
+            
+            <button class="calculate-btn">✨ Calcular horarios</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-card">
+        <h3>🚀 Fácil de integrar</h3>
+        <p>Un solo archivo CSS y JavaScript para integrar en cualquier sitio web.</p>
+        <ul>
+          <li>Sin dependencias externas</li>
+          <li>Compatible con todos los frameworks</li>
+          <li>Responsive y mobile-first</li>
+        </ul>
+      </div>
+      
+      <div class="feature-card">
+        <h3>🎨 Personalizable</h3>
+        <p>Adapta el widget a tu diseño con múltiples opciones de configuración.</p>
+        <ul>
+          <li>Temas claro y oscuro</li>
+          <li>Mostrar/ocultar elementos</li>
+          <li>Altura personalizable</li>
+        </ul>
+      </div>
+      
+      <div class="feature-card">
+        <h3>🔗 Genera backlinks</h3>
+        <p>Incluye un enlace a tu sitio web para mejorar tu SEO y autoridad.</p>
+        <ul>
+          <li>Enlace dofollow automático</li>
+          <li>Texto de anclaje optimizado</li>
+          <li>Atributos SEO correctos</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="code-section">
+      <h3>📋 Código HTML para embeder</h3>
+      <pre><code>&lt;!-- Widget Calculadora de Sueño --&gt;
+&lt;div id="calculadora-sueno-widget"&gt;&lt;/div&gt;
+
+&lt;!-- Estilos del widget --&gt;
+&lt;link rel="stylesheet" href="https://calculadora-sueno.com/widget.css"&gt;
+
+&lt;!-- Script del widget --&gt;
+&lt;script src="https://calculadora-sueno.com/widget.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  // Inicializar widget
+  SleepWidget.init({
+    container: '#calculadora-sueno-widget',
+    theme: 'light', // 'light' o 'dark'
+    showHeader: true,
+    showTips: false,
+    showFooter: true,
+    height: 'auto'
+  });
+&lt;/script&gt;</code></pre>
+    </div>
+    
+    <div class="code-section">
+      <h3>⚙️ Opciones de configuración</h3>
+      <pre><code>SleepWidget.init({
+  // Contenedor donde se insertará el widget
+  container: '#mi-contenedor',
+  
+  // Tema del widget
+  theme: 'light', // 'light' | 'dark'
+  
+  // Mostrar/ocultar elementos
+  showHeader: true,   // Título y descripción
+  showTips: false,    // Consejos de sueño
+  showFooter: true,   // Enlace y créditos
+  
+  // Altura del widget
+  height: 'auto'      // 'auto' | '400px' | '600px'
+});</code></pre>
+    </div>
+    
+    <div class="code-section">
+      <h3>🎯 Ejemplos de implementación</h3>
+      <pre><code>// Widget básico
+SleepWidget.init({
+  container: '#widget-basico'
+});
+
+// Widget personalizado
+SleepWidget.init({
+  container: '#widget-personalizado',
+  theme: 'dark',
+  showHeader: false,
+  showTips: true,
+  height: '500px'
+});
+
+// Widget en sidebar
+SleepWidget.init({
+  container: '.sidebar-widget',
+  theme: 'light',
+  showFooter: true
+});</code></pre>
+    </div>
+    
+    <div class="cta-section">
+      <h2>🚀 ¿Listo para integrar?</h2>
+      <p>Mejora la experiencia de tus usuarios y genera backlinks de calidad con nuestro widget gratuito.</p>
+      <a href="https://calculadora-sueno.com" class="btn" target="_blank">
+        🌙 Ver calculadora completa
+      </a>
+    </div>
+    
+    <div class="footer">
+      <p>© 2024 Calculadora de Sueño - Widget gratuito para mejorar el descanso de tus usuarios</p>
+    </div>
+  </div>
+  
+  <!-- Estilos del widget para la demo -->
+  <link rel="stylesheet" href="/widget.css">
+</body>
+</html>

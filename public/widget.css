@@ -1,0 +1,460 @@
+/* 
+ * Widget Embebible - Calculadora de Sueño
+ * Versión: 1.0.0
+ * 
+ * Este archivo CSS permite a otros sitios web estilizar el widget
+ * de la calculadora de sueño de manera consistente.
+ */
+
+/* Reset básico para el widget */
+.sleep-widget * {
+  box-sizing: border-box;
+}
+
+.sleep-widget {
+  font-family: 'Poppins', 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  max-width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  color: #37474F;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.sleep-widget.dark {
+  background: rgba(255, 255, 255, 0.1);
+  color: #E8EAF6;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Header del widget */
+.widget-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.widget-header h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #FF8A80;
+}
+
+.widget-header p {
+  margin: 0;
+  color: #78909C;
+  font-size: 0.9rem;
+}
+
+.sleep-widget.dark .widget-header p {
+  color: #BDBDBD;
+}
+
+/* Formulario del widget */
+.widget-form {
+  margin-bottom: 20px;
+}
+
+.mode-toggle {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.mode-toggle button {
+  flex: 1;
+  padding: 10px 12px;
+  border: 2px solid #E0E0E0;
+  background: #F5F5F5;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: #666;
+}
+
+.sleep-widget.dark .mode-toggle button {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #E8EAF6;
+}
+
+.mode-toggle button.active {
+  background: linear-gradient(135deg, #FF8A80, #BA68C8);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 2px 8px rgba(255, 138, 128, 0.3);
+}
+
+.mode-toggle button:hover:not(.active) {
+  background: #EEEEEE;
+  border-color: #BDBDBD;
+}
+
+.sleep-widget.dark .mode-toggle button:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Grupos de formulario */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #37474F;
+}
+
+.sleep-widget.dark .form-group label {
+  color: #E8EAF6;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #E0E0E0;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  background: white;
+  color: #37474F;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.sleep-widget.dark .form-group input,
+.sleep-widget.dark .form-group select {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #E8EAF6;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #FF8A80;
+  box-shadow: 0 0 0 3px rgba(255, 138, 128, 0.1);
+}
+
+/* Botón de calcular */
+.calculate-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #FF8A80, #BA68C8);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(255, 138, 128, 0.3);
+}
+
+.calculate-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(255, 138, 128, 0.4);
+}
+
+.calculate-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Resultados del widget */
+.widget-results {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #E0E0E0;
+}
+
+.sleep-widget.dark .widget-results {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+.widget-results h4 {
+  margin: 0 0 16px 0;
+  font-size: 1.1rem;
+  color: #37474F;
+  text-align: center;
+}
+
+.sleep-widget.dark .widget-results h4 {
+  color: #E8EAF6;
+}
+
+.result-item {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid #E0E0E0;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.sleep-widget.dark .result-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.result-time {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #FF8A80;
+  min-width: 60px;
+}
+
+.result-label {
+  flex: 1;
+  font-size: 0.9rem;
+  color: #37474F;
+}
+
+.sleep-widget.dark .result-label {
+  color: #E8EAF6;
+}
+
+.quality-badge {
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+  min-width: 60px;
+  text-align: center;
+}
+
+.quality-badge.optimal {
+  background: linear-gradient(135deg, #81C784, #4CAF50);
+}
+
+.quality-badge.good {
+  background: linear-gradient(135deg, #64B5F6, #2196F3);
+}
+
+.quality-badge.minimal {
+  background: linear-gradient(135deg, #FFB74D, #FF9800);
+}
+
+/* Tips del widget */
+.widget-tips {
+  margin-top: 20px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  border: 1px solid #E0E0E0;
+  text-align: center;
+}
+
+.sleep-widget.dark .widget-tips {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.widget-tips p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #78909C;
+}
+
+.sleep-widget.dark .widget-tips p {
+  color: #BDBDBD;
+}
+
+/* Footer del widget */
+.widget-footer {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #E0E0E0;
+  text-align: center;
+}
+
+.sleep-widget.dark .widget-footer {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+.widget-footer p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #78909C;
+}
+
+.sleep-widget.dark .widget-footer p {
+  color: #BDBDBD;
+}
+
+.widget-footer a {
+  color: #FF8A80;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.widget-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .sleep-widget {
+    padding: 16px;
+    border-radius: 16px;
+  }
+  
+  .mode-toggle {
+    flex-direction: column;
+  }
+  
+  .result-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+  
+  .result-time {
+    min-width: auto;
+  }
+  
+  .quality-badge {
+    min-width: auto;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+.widget-results {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.result-item {
+  animation: fadeIn 0.3s ease-out;
+  animation-fill-mode: both;
+}
+
+/* Estilos para botones de modo */
+.mode-btn {
+  border: 2px solid #E0E0E0;
+  background: #F5F5F5;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: #666;
+  padding: 10px 12px;
+  flex: 1;
+}
+
+.sleep-widget.dark .mode-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #E8EAF6;
+}
+
+.mode-btn.active {
+  background: linear-gradient(135deg, #FF8A80, #BA68C8);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 2px 8px rgba(255, 138, 128, 0.3);
+}
+
+.mode-btn:hover:not(.active) {
+  background: #EEEEEE;
+  border-color: #BDBDBD;
+}
+
+.sleep-widget.dark .mode-btn:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Estilos para etiquetas de tiempo */
+.time-label {
+  display: inline-block;
+}
+
+/* Estilos para contenedor de resultados */
+.results-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Estilos para elementos de resultado */
+.result-item {
+  transition: all 0.3s ease;
+}
+
+.result-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.sleep-widget.dark .result-item:hover {
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos para inputs y selects en modo oscuro */
+.sleep-widget.dark input::placeholder {
+  color: rgba(232, 234, 246, 0.6);
+}
+
+.sleep-widget.dark select option {
+  background: #2D2D2D;
+  color: #E8EAF6;
+}
+
+/* Estilos para focus visible */
+.sleep-widget button:focus-visible,
+.sleep-widget input:focus-visible,
+.sleep-widget select:focus-visible {
+  outline: 2px solid #FF8A80;
+  outline-offset: 2px;
+}
+
+/* Estilos para estados de loading */
+.calculate-btn:disabled {
+  background: linear-gradient(135deg, #BDBDBD, #9E9E9E);
+  cursor: not-allowed;
+}
+
+/* Estilos para mensajes de error */
+.widget-error {
+  background: rgba(244, 67, 54, 0.1);
+  border: 1px solid rgba(244, 67, 54, 0.3);
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 16px;
+  color: #D32F2F;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.sleep-widget.dark .widget-error {
+  background: rgba(244, 67, 54, 0.2);
+  border-color: rgba(244, 67, 54, 0.4);
+  color: #FFCDD2;
+}

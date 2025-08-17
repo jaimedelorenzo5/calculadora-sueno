@@ -6,9 +6,6 @@ import {
   trackSleepCalculation, 
   trackModeChange, 
   trackThemeChange, 
-  trackCopyAction, 
-  trackShareAction, 
-  trackCalendarDownload,
   initWebVitalsTracking,
   trackUserEngagement
 } from './lib/analytics.js';
@@ -100,62 +97,26 @@ function App() {
     
     // Simular cálculo asíncrono para mejor UX
     setTimeout(() => {
-              try {
-          const sleepResults = calculateSleepTimes(
-            config.mode, 
-            config.time, 
-            parseInt(config.latency)
-          );
-          setResults(sleepResults);
-          setIsLoading(false);
-          
-          // Trackear cálculo exitoso
-          if (sleepResults.length > 0) {
-            const bestResult = sleepResults[0];
-            trackSleepCalculation(config.mode, config.time, config.latency, bestResult.cycles);
-          }
-        } catch (error) {
-          console.error('Error al calcular:', error);
-          setIsLoading(false);
-          setNotification('Error al calcular los horarios. Inténtalo de nuevo.');
+      try {
+        const sleepResults = calculateSleepTimes(
+          config.mode, 
+          config.time, 
+          parseInt(config.latency)
+        );
+        setResults(sleepResults);
+        setIsLoading(false);
+        
+        // Trackear cálculo exitoso
+        if (sleepResults.length > 0) {
+          const bestResult = sleepResults[0];
+          trackSleepCalculation(config.mode, config.time, config.latency, bestResult.cycles);
         }
+      } catch (error) {
+        console.error('Error al calcular:', error);
+        setIsLoading(false);
+        setNotification('Error al calcular los horarios. Inténtalo de nuevo.');
+      }
     }, 500);
-  };
-
-  // Copiar al portapapeles
-  const handleCopy = async (text) => {
-    try {
-      await navigator.clipboard.writeText(text);
-      setNotification('Copiado al portapapeles');
-      trackCopyAction('result');
-    } catch (error) {
-      // Fallback para navegadores antiguos
-      const textArea = document.createElement('textarea');
-      textArea.value = text;
-      document.body.appendChild(textArea);
-      textArea.select();
-      document.execCommand('copy');
-      document.body.removeChild(textArea);
-      setNotification('Copiado al portapapeles');
-      trackCopyAction('result');
-    }
-    
-    // Limpiar notificación después de 3 segundos
-    setTimeout(() => setNotification(''), 3000);
-  };
-
-  // Compartir
-  const handleShare = (result) => {
-    setNotification('Función de compartir ejecutada');
-    trackShareAction('web_share');
-    setTimeout(() => setNotification(''), 3000);
-  };
-
-  // Añadir al calendario
-  const handleAddToCalendar = (result) => {
-    setNotification('Evento añadido al calendario');
-    trackCalendarDownload(result.quality);
-    setTimeout(() => setNotification(''), 3000);
   };
 
   return (
@@ -181,9 +142,6 @@ function App() {
           <Results
             results={results}
             mode={config.mode}
-            onCopy={handleCopy}
-            onShare={handleShare}
-            onAddToCalendar={handleAddToCalendar}
           />
         )}
         
@@ -195,7 +153,6 @@ function App() {
         
         <ShareButtons 
           config={config} 
-          onCopy={handleCopy} 
         />
         
         <Footer />

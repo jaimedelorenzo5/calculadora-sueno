@@ -1,48 +1,8 @@
 import React from 'react';
-import { generateICS, formatSleepDuration } from '../lib/sleep.js';
+import { formatSleepDuration } from '../lib/sleep.js';
 
-const Results = ({ results, mode, onCopy, onShare, onAddToCalendar }) => {
+const Results = ({ results, mode }) => {
   if (!results || results.length === 0) return null;
-
-  const handleCopy = (result) => {
-    const text = `${mode === 'wake' ? 'Para despertarte' : 'Para acostarte'} a las ${result.time}: ${result.label} - Calidad: ${result.quality}`;
-    onCopy(text);
-  };
-
-  const handleShare = async (result) => {
-    const shareData = {
-      title: 'Calculadora de Sueño',
-      text: `${mode === 'wake' ? 'Para despertarte' : 'Para acostarte'} a las ${result.time}: ${result.label}`,
-      url: window.location.href
-    };
-
-    if (navigator.share) {
-      try {
-        await navigator.share(shareData);
-      } catch (error) {
-        console.log('Error al compartir:', error);
-      }
-    } else {
-      // Fallback: copiar al portapapeles
-      onCopy(shareData.text);
-    }
-  };
-
-  const handleAddToCalendar = (result) => {
-    const icsContent = generateICS(result);
-    const blob = new Blob([icsContent], { type: 'text/calendar' });
-    const url = URL.createObjectURL(blob);
-    
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `sueño-${result.quality}.ics`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
-    
-    onAddToCalendar(result);
-  };
 
   const getQualityClass = (quality) => {
     switch (quality) {
@@ -69,32 +29,6 @@ const Results = ({ results, mode, onCopy, onShare, onAddToCalendar }) => {
           <div className="result-label">{result.label}</div>
           <div style={{ color: 'var(--muted)', fontSize: 'var(--font-size-sm)' }}>
             Duración total: {formatSleepDuration(result.totalMinutes)}
-          </div>
-          
-          <div className="result-actions">
-            <button
-              className="btn btn-secondary"
-              onClick={() => handleCopy(result)}
-              aria-label="Copiar resultado"
-            >
-              📋 Copiar
-            </button>
-            
-            <button
-              className="btn btn-secondary"
-              onClick={() => handleShare(result)}
-              aria-label="Compartir resultado"
-            >
-              📤 Compartir
-            </button>
-            
-            <button
-              className="btn btn-secondary"
-              onClick={() => handleAddToCalendar(result)}
-              aria-label="Añadir al calendario"
-            >
-              📅 Calendario
-            </button>
           </div>
         </div>
       ))}

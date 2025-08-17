@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ShareButtons = ({ config, onCopy }) => {
+const ShareButtons = ({ config }) => {
   const handleWhatsAppShare = () => {
     const text = `Calculadora de Sueño: Descubre tu horario ideal para dormir y despertar basado en ciclos de 90 minutos. ${window.location.href}`;
     const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(text)}`;
@@ -11,22 +11,6 @@ const ShareButtons = ({ config, onCopy }) => {
     const text = `Calculadora de Sueño: Tu horario ideal para dormir y despertar 🛏️💤 ${window.location.href}`;
     const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
     window.open(twitterUrl, '_blank');
-  };
-
-  const handleCopyURL = async () => {
-    try {
-      await navigator.clipboard.writeText(window.location.href);
-      onCopy('URL copiada al portapapeles');
-    } catch (error) {
-      // Fallback para navegadores que no soportan clipboard API
-      const textArea = document.createElement('textarea');
-      textArea.value = window.location.href;
-      document.body.appendChild(textArea);
-      textArea.select();
-      document.execCommand('copy');
-      document.body.removeChild(textArea);
-      onCopy('URL copiada al portapapeles');
-    }
   };
 
   const handleWebShare = async () => {
@@ -40,9 +24,6 @@ const ShareButtons = ({ config, onCopy }) => {
       } catch (error) {
         console.log('Error al compartir:', error);
       }
-    } else {
-      // Fallback: copiar URL
-      handleCopyURL();
     }
   };
 
@@ -72,14 +53,6 @@ const ShareButtons = ({ config, onCopy }) => {
           aria-label="Compartir en Twitter"
         >
           🐦 Twitter
-        </button>
-        
-        <button
-          className="share-btn copy"
-          onClick={handleCopyURL}
-          aria-label="Copiar URL"
-        >
-          🔗 Copiar URL
         </button>
         
         {navigator.share && (
