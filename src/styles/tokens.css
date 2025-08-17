@@ -1,0 +1,177 @@
+:root {
+  /* Colores - Tema pastel relajante */
+  --bg: linear-gradient(135deg, #E3F2FD 0%, #F3E5F5 100%);
+  --card: rgba(255, 255, 255, 0.9);
+  --brand: #FF8A80; /* Coral suave */
+  --brand-2: #81C784; /* Verde menta */
+  --brand-3: #64B5F6; /* Azul cielo */
+  --brand-4: #BA68C8; /* Lila suave */
+  --text: #37474F;
+  --muted: #78909C;
+  --ok: #81C784; /* Verde menta */
+  --border: rgba(255, 255, 255, 0.3);
+  --shadow: rgba(0, 0, 0, 0.08);
+  --shadow-hover: rgba(0, 0, 0, 0.12);
+  
+  /* Tipografía redondeada y amigable */
+  --font-family: 'Poppins', 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.5rem;
+  
+  /* Espaciado generoso para respiración */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  
+  /* Bordes muy redondeados y sombras suaves */
+  --radius: 24px;
+  --radius-sm: 16px;
+  --radius-lg: 32px;
+  --shadow-sm: 0 2px 8px var(--shadow);
+  --shadow-md: 0 4px 16px var(--shadow);
+  --shadow-lg: 0 8px 32px var(--shadow);
+  --shadow-hover: 0 8px 24px var(--shadow-hover);
+  
+  /* Transiciones suaves y relajantes */
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Tema claro (por defecto) */
+[data-theme="light"] {
+  --bg: linear-gradient(135deg, #E3F2FD 0%, #F3E5F5 100%);
+  --card: rgba(255, 255, 255, 0.95);
+  --text: #37474F;
+  --muted: #78909C;
+  --border: rgba(255, 255, 255, 0.4);
+}
+
+/* Tema oscuro suave */
+[data-theme="dark"] {
+  --bg: linear-gradient(135deg, #1A237E 0%, #4A148C 100%);
+  --card: rgba(255, 255, 255, 0.1);
+  --text: #E8EAF6;
+  --muted: #BDBDBD;
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+/* Reset y base con estilos relajantes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--bg);
+  background-attachment: fixed;
+  color: var(--text);
+  line-height: 1.7;
+  transition: var(--transition);
+  min-height: 100vh;
+}
+
+/* Utilidades con estilo pastel */
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(10px);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3) var(--space-6);
+  border: none;
+  border-radius: var(--radius);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+  min-height: 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 3px;
+}
+
+.btn:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn:hover:before {
+  left: 100%;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--brand), #FFAB91);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn-secondary {
+  background: var(--card);
+  color: var(--text);
+  border: 2px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+  background: var(--brand-3);
+  color: white;
+  border-color: var(--brand-3);
+  transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .container {
+    max-width: 640px;
+  }
+}

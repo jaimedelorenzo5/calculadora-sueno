@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO Meta Tags -->
+  <title>Calculadora de Sueño: Tu hora ideal para dormir y despertar</title>
+  <meta name="description" content="Calcula tu horario de sueño perfecto basado en ciclos de 90 minutos. Descubre cuándo acostarte y despertarte para sentirte descansado y energético." />
+  <meta name="keywords" content="calculadora sueño, ciclos sueño, horario dormir, calidad sueño, higiene sueño, descanso, cronobiología" />
+  <meta name="author" content="Calculadora de Sueño" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="es" />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://calculadora-sueno.com/" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://calculadora-sueno.com/" />
+  <meta property="og:title" content="Calculadora de Sueño: Tu hora ideal para dormir y despertar" />
+  <meta property="og:description" content="Calcula tu horario de sueño perfecto basado en ciclos de 90 minutos. Descubre cuándo acostarte y despertarte para sentirte descansado y energético." />
+  <meta property="og:image" content="/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Calculadora de Sueño" />
+  <meta property="og:locale" content="es_ES" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://calculadora-sueno.com/" />
+  <meta name="twitter:title" content="Calculadora de Sueño: Tu hora ideal para dormir y despertar" />
+  <meta name="twitter:description" content="Calcula tu horario de sueño perfecto basado en ciclos de 90 minutos. Descubre cuándo acostarte y despertarte para sentirte descansado y energético." />
+  <meta name="twitter:image" content="/og.png" />
+  
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <meta name="theme-color" content="#FF8A5B" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Calculadora de Sueño" />
+  <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" />
+  <link rel="preload" href="/src/styles/app.css" as="style" />
+  
+  <!-- Fonts with font-display: swap -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Calculadora de Sueño",
+    "description": "Calcula tu horario de sueño perfecto basado en ciclos de 90 minutos. Descubre cuándo acostarte y despertarte para sentirte descansado y energético.",
+    "url": "https://calculadora-sueno.com/",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web Browser",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Calculadora de Sueño",
+      "url": "https://calculadora-sueno.com/"
+    },
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuántas horas de sueño necesito?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La mayoría de adultos necesitan entre 6-9 horas de sueño por noche, equivalentes a 4-6 ciclos completos de 90 minutos cada uno."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué es un ciclo de sueño de 90 minutos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Un ciclo de sueño es el tiempo que tarda tu cuerpo en completar todas las fases del sueño: ligero, profundo y REM. Cada ciclo dura aproximadamente 90 minutos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuál es la mejor hora para dormirme si me levanto a las 7:00?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Para despertarte a las 7:00, considera 6 ciclos (9 horas) + latencia. Si tardas 15 minutos en dormirte, acuéstate a las 21:45 para un descanso óptimo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿La siesta ideal dura 20 o 90 minutos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depende de tu objetivo: 20 minutos para energía rápida sin afectar el sueño nocturno, 90 minutos para completar un ciclo completo y sentirte completamente renovado."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué influye en la latencia de sueño?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La latencia se ve afectada por el estrés, cafeína, uso de pantallas, temperatura de la habitación, ejercicio reciente y la consistencia de tu horario de sueño."
+        }
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then((registration) => {
+            console.log('SW registered: ', registration);
+          })
+          .catch((registrationError) => {
+            console.log('SW registration failed: ', registrationError);
+          });
+      });
+    }
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>

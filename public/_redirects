@@ -1,0 +1,16 @@
+# Redirecciones para Calculadora de Sueño
+# Netlify redirects
+
+# Redirigir www a no-www
+https://www.calculadora-sueno.com/* https://calculadora-sueno.com/:splat 301!
+
+# Redirigir HTTP a HTTPS
+http://calculadora-sueno.com/* https://calculadora-sueno.com/:splat 301!
+
+# SPA fallback - todas las rutas van a index.html
+/* /index.html 200
+
+# Cache headers para recursos estáticos
+/css/* Cache-Control: public, max-age=31536000
+/js/* Cache-Control: public, max-age=31536000
+/icons/* Cache-Control: public, max-age=31536000
