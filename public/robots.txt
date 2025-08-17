@@ -1,6 +1,13 @@
 User-agent: *
 Allow: /
 
+# Bloquear URLs con parámetros de consulta
+Disallow: /*?*
+Disallow: /*mode=*
+Disallow: /*time=*
+Disallow: /*latency=*
+Disallow: /*theme=*
+
 # Sitemap
 Sitemap: https://calculadora-sueno.com/sitemap.xml
 

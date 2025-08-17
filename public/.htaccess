@@ -1,0 +1,44 @@
+# Redirecciones para Calculadora de Sueño
+# Redirigir URLs con parámetros a la home limpia
+
+# Redirigir URLs con parámetros de consulta a la home
+RewriteEngine On
+
+# Redirigir URLs con parámetros a la home (manteniendo el canonical)
+RewriteCond %{QUERY_STRING} ^.*$
+RewriteRule ^$ /? [R=301,L]
+
+# Prevenir indexación de URLs con parámetros
+RewriteCond %{QUERY_STRING} ^.*$
+RewriteRule ^$ / [L]
+
+# Headers de seguridad y SEO
+<IfModule mod_headers.c>
+    # Prevenir indexación de URLs con parámetros
+    <If "%{QUERY_STRING} != ''">
+        Header set X-Robots-Tag "noindex, nofollow"
+    </If>
+    
+    # Cache para recursos estáticos
+    <FilesMatch "\.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </FilesMatch>
+    
+    # Cache para HTML
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "max-age=3600, public"
+    </FilesMatch>
+</IfModule>
+
+# Comprimir archivos
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
