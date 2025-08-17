@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://calculadora-sueno.com/sitemap.xml
+
+# Crawl-delay para ser respetuoso con el servidor
+Crawl-delay: 1
+
+# Permitir acceso a recursos estáticos
+Allow: /css/
+Allow: /js/
+Allow: /icons/
+Allow: /manifest.webmanifest
+Allow: /sw.js
+
+# Bloquear acceso a archivos de configuración
+Disallow: /netlify.toml
+Disallow: /vite.config.js
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.env

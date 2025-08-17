@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Página principal -->
+  <url>
+    <loc>https://calculadora-sueno.com/</loc>
+    <lastmod>2024-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Página principal con parámetros de ejemplo -->
+  <url>
+    <loc>https://calculadora-sueno.com/?mode=wake&amp;time=07:00&amp;latency=15</loc>
+    <lastmod>2024-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Otro ejemplo de parámetros -->
+  <url>
+    <loc>https://calculadora-sueno.com/?mode=sleep&amp;time=23:00&amp;latency=10</loc>
+    <lastmod>2024-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Ejemplo con hora de despertar temprano -->
+  <url>
+    <loc>https://calculadora-sueno.com/?mode=wake&amp;time=06:00&amp;latency=15</loc>
+    <lastmod>2024-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Ejemplo con hora de acostarse tarde -->
+  <url>
+    <loc>https://calculadora-sueno.com/?mode=sleep&amp;time=00:00&amp;latency=20</loc>
+    <lastmod>2024-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Ejemplo para madrugadores -->
+  <url>
+    <loc>https://calculadora-sueno.com/?mode=wake&amp;time=05:00&amp;latency=15</loc>
+    <lastmod>2024-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Ejemplo para noctámbulos -->
+  <url>
+    <loc>https://calculadora-sueno.com/?mode=sleep&amp;time=02:00&amp;latency=15</loc>
+    <lastmod>2024-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+</urlset>
