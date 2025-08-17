@@ -39,7 +39,7 @@ const Results = ({ results, mode }) => {
         color: 'var(--muted)',
         fontSize: 'var(--font-size-sm)'
       }}>
-        💡 Los horarios se basan en ciclos de 90 minutos. 
+        Los horarios se basan en ciclos de 90 minutos. 
         {mode === 'wake' ? ' Elige el que mejor se adapte a tu rutina.' : ' Ajusta según tu experiencia personal.'}
       </div>
     </section>

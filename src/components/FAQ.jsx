@@ -84,7 +84,7 @@ const FAQ = () => {
         color: 'var(--muted)',
         fontSize: 'var(--font-size-sm)'
       }}>
-        ❓ ¿Tienes más preguntas? Los consejos de arriba también pueden ayudarte a entender mejor cómo optimizar tu sueño.
+        ¿Tienes más preguntas? Los consejos de arriba también pueden ayudarte a entender mejor cómo optimizar tu sueño.
       </div>
     </section>
   );

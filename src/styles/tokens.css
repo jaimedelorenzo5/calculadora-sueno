@@ -58,14 +58,7 @@
   --border: rgba(255, 255, 255, 0.4);
 }
 
-/* Tema oscuro suave */
-[data-theme="dark"] {
-  --bg: linear-gradient(135deg, #1A237E 0%, #4A148C 100%);
-  --card: rgba(255, 255, 255, 0.1);
-  --text: #E8EAF6;
-  --muted: #BDBDBD;
-  --border: rgba(255, 255, 255, 0.1);
-}
+/* Tema claro fijo - no hay tema oscuro */
 
 /* Reset y base con estilos relajantes */
 * {

@@ -72,7 +72,7 @@ const ShareButtons = ({ config }) => {
         color: 'var(--muted)',
         fontSize: 'var(--font-size-sm)'
       }}>
-        💡 Comparte con amigos y familiares para que también puedan mejorar su descanso
+        Comparte con amigos y familiares para que también puedan mejorar su descanso
       </div>
     </section>
   );

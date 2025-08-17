@@ -33,7 +33,7 @@ const Tips = () => {
       <h2 className="section-title">Consejos para un mejor sueño</h2>
       
       {tips.map((tip, index) => (
-        <div key={index} className="tip-item">
+        <div key={index} className="tip-item scroll-fade-in" style={{ animationDelay: `${0.3 + (index * 0.1)}s` }}>
           <div style={{ textAlign: 'center' }}>
             <h3>{tip.title}</h3>
             <p>{tip.description}</p>
@@ -52,7 +52,7 @@ const Tips = () => {
         border: '2px solid var(--border)',
         backdropFilter: 'blur(10px)'
       }}>
-        🌟 Estos consejos te ayudarán a mejorar la calidad de tu sueño y aprovechar mejor los horarios calculados. 
+        Estos consejos te ayudarán a mejorar la calidad de tu sueño y aprovechar mejor los horarios calculados. 
         Recuerda que cada persona es diferente, así que experimenta para encontrar lo que mejor funciona para ti.
       </div>
     </section>

@@ -25,7 +25,7 @@ function App() {
     mode: 'wake',
     time: '07:00',
     latency: '15',
-    theme: 'dark'
+    theme: 'light'
   });
   
   const [results, setResults] = useState([]);
@@ -35,13 +35,15 @@ function App() {
   // Inicialización y sincronización con URL
   useEffect(() => {
     const initialConfig = getConfig();
-    setConfig(initialConfig);
+    // Forzar tema claro
+    const configWithLightTheme = { ...initialConfig, theme: 'light' };
+    setConfig(configWithLightTheme);
     
-    // Aplicar tema
-    document.documentElement.setAttribute('data-theme', initialConfig.theme);
+    // Aplicar tema claro
+    document.documentElement.setAttribute('data-theme', 'light');
     
     // Actualizar SEO
-    updateMetaTags(initialConfig);
+    updateMetaTags(configWithLightTheme);
     
     // Inicializar analytics
     initWebVitalsTracking();
@@ -50,9 +52,11 @@ function App() {
     // Escuchar cambios en URL
     const unsubscribe = onURLChange(() => {
       const newConfig = getConfig();
-      setConfig(newConfig);
-      document.documentElement.setAttribute('data-theme', newConfig.theme);
-      updateMetaTags(newConfig);
+      // Forzar tema claro en cambios de URL
+      const newConfigWithLightTheme = { ...newConfig, theme: 'light' };
+      setConfig(newConfigWithLightTheme);
+      document.documentElement.setAttribute('data-theme', 'light');
+      updateMetaTags(newConfigWithLightTheme);
     });
     
     return unsubscribe;
@@ -60,17 +64,16 @@ function App() {
 
   // Sincronizar configuración cuando cambie
   useEffect(() => {
-    syncConfig(config);
-    updateMetaTags(config);
+    // Asegurar que siempre se sincronice con tema claro
+    const configWithLightTheme = { ...config, theme: 'light' };
+    syncConfig(configWithLightTheme);
+    updateMetaTags(configWithLightTheme);
   }, [config]);
 
   // Cambiar tema
+  // Tema fijo en modo claro
   const handleThemeToggle = () => {
-    const newTheme = config.theme === 'dark' ? 'light' : 'dark';
-    const newConfig = { ...config, theme: newTheme };
-    setConfig(newConfig);
-    document.documentElement.setAttribute('data-theme', newTheme);
-    trackThemeChange(newTheme);
+    // No hacer nada - tema siempre en modo claro
   };
 
   // Cambiar modo
@@ -122,10 +125,7 @@ function App() {
   return (
     <div className="app">
       <div className="container">
-        <Header 
-          theme={config.theme} 
-          onThemeToggle={handleThemeToggle} 
-        />
+        <Header />
         
         <SleepForm
           mode={config.mode}
@@ -174,6 +174,7 @@ function App() {
           {notification}
         </div>
       )}
+      
     </div>
   );
 }

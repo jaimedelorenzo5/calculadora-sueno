@@ -44,7 +44,7 @@ const Footer = () => {
               alignItems: 'center',
               gap: 'var(--space-2)'
             }}>
-              📚 Enlaces útiles
+              Enlaces útiles
             </h4>
             <ul style={{ listStyle: 'none', padding: 0 }}>
               <li style={{ marginBottom: 'var(--space-2)' }}>
@@ -56,7 +56,7 @@ const Footer = () => {
                   alignItems: 'center',
                   gap: 'var(--space-2)'
                 }}>
-                  💡 Consejos para dormir
+                  Consejos para dormir
                 </a>
               </li>
               <li style={{ marginBottom: 'var(--space-2)' }}>
@@ -68,7 +68,7 @@ const Footer = () => {
                   alignItems: 'center',
                   gap: 'var(--space-2)'
                 }}>
-                  ❓ Preguntas frecuentes
+                  Preguntas frecuentes
                 </a>
               </li>
             </ul>
@@ -82,7 +82,7 @@ const Footer = () => {
               alignItems: 'center',
               gap: 'var(--space-2)'
             }}>
-              🔬 Recursos
+              Recursos
             </h4>
             <ul style={{ listStyle: 'none', padding: 0 }}>
               <li style={{ marginBottom: 'var(--space-2)' }}>
@@ -94,7 +94,7 @@ const Footer = () => {
                   alignItems: 'center',
                   gap: 'var(--space-2)'
                 }}>
-                  ⏰ Ciclos de sueño
+                  Ciclos de sueño
                 </a>
               </li>
               <li style={{ marginBottom: 'var(--space-2)' }}>
@@ -106,7 +106,7 @@ const Footer = () => {
                   alignItems: 'center',
                   gap: 'var(--space-2)'
                 }}>
-                  🌟 Higiene del sueño
+                  Higiene del sueño
                 </a>
               </li>
             </ul>
@@ -129,7 +129,7 @@ const Footer = () => {
             margin: 0,
             lineHeight: 1.6
           }}>
-            ⚕️ <strong>Importante:</strong> Esta herramienta es informativa y educativa. 
+            <strong>Importante:</strong> Esta herramienta es informativa y educativa. 
             No sustituye el consejo médico profesional. Si tienes problemas de sueño persistentes, 
             consulta con un especialista en medicina del sueño.
           </p>
@@ -152,7 +152,7 @@ const Footer = () => {
             fontSize: 'var(--font-size-xs)',
             margin: 0
           }}>
-            🌙 Basado en investigación científica sobre ciclos de sueño y cronobiología.
+            Basado en investigación científica sobre ciclos de sueño y cronobiología.
           </p>
         </div>
       </div>
