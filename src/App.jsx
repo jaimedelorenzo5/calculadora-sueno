@@ -15,7 +15,7 @@ import Results from './components/Results';
 import Tips from './components/Tips';
 import FAQ from './components/FAQ';
 import ShareButtons from './components/ShareButtons';
-import AdSlot from './components/AdSlot';
+
 import Footer from './components/Footer';
 import './styles/app.css';
 
@@ -146,8 +146,6 @@ function App() {
         )}
         
         <Tips />
-        
-        <AdSlot />
         
         <FAQ />
         
