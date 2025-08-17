@@ -2,8 +2,8 @@
 
 // Configuración SEO base
 export const SEO_CONFIG = {
-  title: 'Calculadora de Sueño: Tu hora ideal para dormir y despertar',
-  description: 'Calcula tu horario de sueño perfecto basado en ciclos de 90 minutos. Descubre cuándo acostarte y despertarte para sentirte descansado y energético.',
+  title: 'Calculadora de Sueño | Tu hora ideal para dormir y despertar',
+  description: 'Descubre a qué hora dormir y despertar según ciclos de sueño de 90 min. Calcula tu descanso ideal y despierta con más energía cada día.',
   keywords: 'calculadora sueño, ciclos sueño, horario dormir, calidad sueño, higiene sueño, descanso',
   author: 'Calculadora de Sueño',
   url: 'https://calculadora-sueno.com',
