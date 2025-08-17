@@ -22,3 +22,7 @@ Disallow: /package-lock.json
 Disallow: /node_modules/
 Disallow: /.git/
 Disallow: /.env
+
+# Permitir Google Analytics
+Allow: /gtag
+Allow: /analytics

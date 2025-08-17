@@ -2,6 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { calculateSleepTimes } from './lib/sleep.js';
 import { getConfig, syncConfig, onURLChange } from './lib/urlState.js';
 import { updateMetaTags } from './lib/seo.js';
+import { 
+  trackSleepCalculation, 
+  trackModeChange, 
+  trackThemeChange, 
+  trackCopyAction, 
+  trackShareAction, 
+  trackCalendarDownload,
+  initWebVitalsTracking,
+  trackUserEngagement
+} from './lib/analytics.js';
 import Header from './components/Header';
 import SleepForm from './components/SleepForm';
 import Results from './components/Results';
@@ -36,6 +46,10 @@ function App() {
     // Actualizar SEO
     updateMetaTags(initialConfig);
     
+    // Inicializar analytics
+    initWebVitalsTracking();
+    trackUserEngagement();
+    
     // Escuchar cambios en URL
     const unsubscribe = onURLChange(() => {
       const newConfig = getConfig();
@@ -59,11 +73,13 @@ function App() {
     const newConfig = { ...config, theme: newTheme };
     setConfig(newConfig);
     document.documentElement.setAttribute('data-theme', newTheme);
+    trackThemeChange(newTheme);
   };
 
   // Cambiar modo
   const handleModeChange = (mode) => {
     setConfig(prev => ({ ...prev, mode }));
+    trackModeChange(mode);
   };
 
   // Cambiar hora
@@ -84,19 +100,25 @@ function App() {
     
     // Simular cálculo asíncrono para mejor UX
     setTimeout(() => {
-      try {
-        const sleepResults = calculateSleepTimes(
-          config.mode, 
-          config.time, 
-          parseInt(config.latency)
-        );
-        setResults(sleepResults);
-        setIsLoading(false);
-      } catch (error) {
-        console.error('Error al calcular:', error);
-        setIsLoading(false);
-        setNotification('Error al calcular los horarios. Inténtalo de nuevo.');
-      }
+              try {
+          const sleepResults = calculateSleepTimes(
+            config.mode, 
+            config.time, 
+            parseInt(config.latency)
+          );
+          setResults(sleepResults);
+          setIsLoading(false);
+          
+          // Trackear cálculo exitoso
+          if (sleepResults.length > 0) {
+            const bestResult = sleepResults[0];
+            trackSleepCalculation(config.mode, config.time, config.latency, bestResult.cycles);
+          }
+        } catch (error) {
+          console.error('Error al calcular:', error);
+          setIsLoading(false);
+          setNotification('Error al calcular los horarios. Inténtalo de nuevo.');
+        }
     }, 500);
   };
 
@@ -105,6 +127,7 @@ function App() {
     try {
       await navigator.clipboard.writeText(text);
       setNotification('Copiado al portapapeles');
+      trackCopyAction('result');
     } catch (error) {
       // Fallback para navegadores antiguos
       const textArea = document.createElement('textarea');
@@ -114,6 +137,7 @@ function App() {
       document.execCommand('copy');
       document.body.removeChild(textArea);
       setNotification('Copiado al portapapeles');
+      trackCopyAction('result');
     }
     
     // Limpiar notificación después de 3 segundos
@@ -123,12 +147,14 @@ function App() {
   // Compartir
   const handleShare = (result) => {
     setNotification('Función de compartir ejecutada');
+    trackShareAction('web_share');
     setTimeout(() => setNotification(''), 3000);
   };
 
   // Añadir al calendario
   const handleAddToCalendar = (result) => {
     setNotification('Evento añadido al calendario');
+    trackCalendarDownload(result.quality);
     setTimeout(() => setNotification(''), 3000);
   };
 
