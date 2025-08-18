@@ -403,6 +403,73 @@
   transform: scale(1.02);
 }
 
+/* Home: Artículos relacionados */
+.home-related {
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  margin-top: var(--space-10);
+  box-shadow: var(--shadow-sm);
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+.article-card {
+  display: block;
+  background: white;
+  border: 1px solid #f0f0f0;
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  text-decoration: none;
+  color: var(--text);
+  box-shadow: 0 2px 15px var(--shadow);
+  transition: var(--transition);
+  position: relative;
+}
+
+.article-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.article-card h3 {
+  margin-bottom: var(--space-2);
+  font-weight: 600;
+}
+
+.article-card p {
+  color: var(--muted);
+  margin-bottom: var(--space-4);
+}
+
+.article-card-cta {
+  color: var(--brand-3);
+  font-weight: 600;
+}
+
+.article-card-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, var(--brand-3), var(--brand-4));
+  color: white;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .articles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* Footer con estilo zen */
 .footer {
   text-align: center;

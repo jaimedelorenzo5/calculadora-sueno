@@ -171,6 +171,18 @@ function App() {
         <ShareButtons 
           config={config} 
         />
+
+        {/* Artículos relacionados / enlace a pilar */}
+        <section className="home-related">
+          <h2 className="section-title">Artículos relacionados</h2>
+          <div className="articles-grid">
+            <a className="article-card" href="/articles/como-funciona-el-sueno-fases-etapas.html">
+              <h3>Cómo funciona el sueño: fases y etapas del descanso</h3>
+              <p>Entiende los ciclos de 90 minutos, las fases REM/No REM y por qué influyen en cómo te despiertas.</p>
+              <span className="article-card-cta">Leer artículo →</span>
+            </a>
+          </div>
+        </section>
         
         <Footer />
       </div>

@@ -53,6 +53,10 @@ const Tips = () => {
         backdropFilter: 'blur(10px)'
       }}>
         Estos consejos te ayudarán a mejorar la calidad de tu sueño y aprovechar mejor los horarios calculados. 
+        Para entender mejor cómo funciona el sueño y por qué estos consejos son efectivos, 
+        <a href="/articles/como-funciona-el-sueno-fases-etapas.html" style={{ color: 'var(--brand)', textDecoration: 'none', fontWeight: '600' }}>
+          lee nuestro artículo sobre las fases del sueño
+        </a>. 
         Recuerda que cada persona es diferente, así que experimenta para encontrar lo que mejor funciona para ti.
       </div>
     </section>
