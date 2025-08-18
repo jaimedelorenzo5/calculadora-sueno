@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { calculateSleepTimes } from './lib/sleep.js';
-import { getConfig, syncConfig, onURLChange } from './lib/urlState.js';
+import { getConfig, getConfigSilent, syncConfig, syncConfigSilent, onURLChange, cleanDefaultURLParams } from './lib/urlState.js';
 import { updateMetaTags } from './lib/seo.js';
 import { 
   trackSleepCalculation, 
@@ -34,13 +34,23 @@ function App() {
 
   // Inicialización y sincronización con URL
   useEffect(() => {
-    const initialConfig = getConfig();
+    // Usar getConfigSilent para evitar guardar en URL automáticamente
+    const initialConfig = getConfigSilent();
     // Forzar tema claro
     const configWithLightTheme = { ...initialConfig, theme: 'light' };
     setConfig(configWithLightTheme);
     
     // Aplicar tema claro
     document.documentElement.setAttribute('data-theme', 'light');
+    
+    // Limpiar URL inmediatamente si tiene parámetros por defecto
+    setTimeout(() => {
+      if (window.location.search.includes('mode=wake') && 
+          window.location.search.includes('time=07%3A00') && 
+          window.location.search.includes('latency=15')) {
+        window.history.replaceState({}, '', window.location.pathname);
+      }
+    }, 50);
     
     // Actualizar SEO
     updateMetaTags(configWithLightTheme);
@@ -66,7 +76,16 @@ function App() {
   useEffect(() => {
     // Asegurar que siempre se sincronice con tema claro
     const configWithLightTheme = { ...config, theme: 'light' };
-    syncConfig(configWithLightTheme);
+    
+    // Solo sincronizar si no es la configuración inicial por defecto
+    const isInitialLoad = !window.location.search;
+    if (!isInitialLoad) {
+      syncConfig(configWithLightTheme);
+    } else {
+      // En carga inicial, solo guardar en localStorage
+      syncConfigSilent(configWithLightTheme);
+    }
+    
     updateMetaTags(configWithLightTheme);
   }, [config]);
 

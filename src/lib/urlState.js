@@ -70,10 +70,28 @@ export function getConfig() {
   const urlParams = getURLParams();
   const localStorageConfig = getLocalStorageConfig();
   
+  // Si no hay parámetros en URL, usar solo localStorage + defaults
+  if (Object.keys(urlParams).length === 0) {
+    return {
+      ...DEFAULT_VALUES,
+      ...localStorageConfig
+    };
+  }
+  
+  // Si hay parámetros en URL, incluirlos
   return {
     ...DEFAULT_VALUES,
     ...localStorageConfig,
     ...urlParams
+  };
+}
+
+// Obtener configuración sin guardar en URL automáticamente
+export function getConfigSilent() {
+  const localStorageConfig = getLocalStorageConfig();
+  return {
+    ...DEFAULT_VALUES,
+    ...localStorageConfig
   };
 }
 
@@ -102,20 +120,40 @@ export function syncConfig(config) {
   // Guardar en localStorage
   saveConfigToLocalStorage(config);
   
-  // Actualizar URL solo si hay cambios significativos
-  const currentURLParams = getURLParams();
-  const hasChanges = Object.keys(config).some(key => 
-    currentURLParams[key] !== config[key]
-  );
+  // Solo actualizar URL si NO es configuración por defecto
+  const isDefaultConfig = JSON.stringify(config) === JSON.stringify(DEFAULT_VALUES);
   
-  if (hasChanges) {
-    setURLParams(config);
+  // Si es configuración por defecto, limpiar URL
+  if (isDefaultConfig) {
+    clearURLParams();
+    return;
   }
+  
+  // Si no es por defecto, actualizar URL
+  setURLParams(config);
+}
+
+// Sincronizar configuración solo en localStorage (sin URL)
+export function syncConfigSilent(config) {
+  // Solo guardar en localStorage, no tocar URL
+  saveConfigToLocalStorage(config);
 }
 
 // Limpiar parámetros de URL
 export function clearURLParams() {
   window.history.replaceState({}, '', window.location.pathname);
+}
+
+// Limpiar URL si solo tiene valores por defecto
+export function cleanDefaultURLParams() {
+  const urlParams = getURLParams();
+  const isDefaultConfig = Object.keys(urlParams).every(key => 
+    urlParams[key] === DEFAULT_VALUES[key]
+  );
+  
+  if (isDefaultConfig) {
+    clearURLParams();
+  }
 }
 
 // Obtener URL completa para compartir
