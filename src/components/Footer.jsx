@@ -109,6 +109,18 @@ const Footer = () => {
                   Higiene del sueño
                 </a>
               </li>
+              <li style={{ marginBottom: 'var(--space-2)' }}>
+                <a href="/sobre-proyecto.html" style={{ 
+                  color: 'var(--muted)', 
+                  textDecoration: 'none',
+                  transition: 'var(--transition)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 'var(--space-2)'
+                }}>
+                  Sobre el proyecto
+                </a>
+              </li>
             </ul>
           </div>
         </div>

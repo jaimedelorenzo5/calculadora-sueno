@@ -4,7 +4,7 @@
   <!-- Página principal - ÚNICA URL para indexar -->
   <url>
     <loc>https://calculadora-sueno.com/</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,9 +12,17 @@
   <!-- Artículos -->
   <url>
     <loc>https://calculadora-sueno.com/articles/como-funciona-el-sueno-fases-etapas.html</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  
+  <!-- Sobre el Proyecto -->
+  <url>
+    <loc>https://calculadora-sueno.com/sobre-proyecto.html</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   
 </urlset>
