@@ -176,9 +176,15 @@ function App() {
         <section className="home-related">
           <h2 className="section-title">Artículos relacionados</h2>
           <div className="articles-grid">
-            <a className="article-card" href="/articles/como-funciona-el-sueno-fases-etapas.html">
+            <a className="article-card" href="/articulos/fases-sueno">
               <h3>Cómo funciona el sueño: fases y etapas del descanso</h3>
               <p>Entiende los ciclos de 90 minutos, las fases REM/No REM y por qué influyen en cómo te despiertas.</p>
+              <span className="article-card-cta">Leer artículo →</span>
+            </a>
+            
+            <a className="article-card" href="/articulos/horas-sueno-por-edad">
+              <h3>¿Cuántas horas debo dormir según mi edad?</h3>
+              <p>Descubre cuántas horas necesitas dormir según tu edad con nuestra guía completa basada en evidencia científica.</p>
               <span className="article-card-cta">Leer artículo →</span>
             </a>
           </div>

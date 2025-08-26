@@ -707,3 +707,181 @@ html {
     transform: scale(1);
   }
 }
+
+/* Estilos para la tabla de sueño por edad */
+.sleep-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: white;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border);
+}
+
+.sleep-table thead {
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-3) 100%);
+  color: white;
+}
+
+.sleep-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+.sleep-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: top;
+}
+
+.sleep-table tbody tr:hover {
+  background: rgba(255, 138, 128, 0.05);
+  transition: var(--transition);
+}
+
+.sleep-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.sleep-table strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* Responsive para la tabla */
+@media (max-width: 768px) {
+  .sleep-table {
+    font-size: 0.9rem;
+  }
+  
+  .sleep-table th,
+  .sleep-table td {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .sleep-table th:last-child,
+  .sleep-table td:last-child {
+    display: none; /* Ocultar la columna de consideraciones en móvil */
+  }
+}
+
+/* Mejoras para info-box */
+.info-box {
+  background: linear-gradient(135deg, rgba(255, 138, 128, 0.05) 0%, rgba(129, 199, 132, 0.05) 100%);
+  border: 2px solid var(--brand);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 4px 20px rgba(255, 138, 128, 0.1);
+}
+
+.info-box h4 {
+  color: var(--brand);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Estilos para el contenido relacionado */
+.related-content {
+  background: #f8f9fa;
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin: 2rem 0;
+  border-left: 4px solid var(--brand);
+}
+
+.related-content h3 {
+  color: var(--text);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.related-content a {
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.related-content a:hover {
+  color: var(--brand-3);
+  text-decoration: underline;
+}
+
+/* Estilos para la sección de referencias */
+.references-section {
+  background: #f8f9fa;
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin: 2rem 0;
+  border-left: 4px solid var(--brand-2);
+}
+
+.references-section h3 {
+  color: var(--text);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  border-bottom: 2px solid var(--brand-2);
+  padding-bottom: 0.5rem;
+}
+
+.references-section > p {
+  margin-bottom: 1.5rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.references-list {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.references-list li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.references-list a {
+  color: var(--brand-3);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+  border-bottom: 1px dotted var(--brand-3);
+}
+
+.references-list a:hover {
+  color: var(--brand);
+  border-bottom-color: var(--brand);
+}
+
+.references-note {
+  background: rgba(129, 199, 132, 0.1);
+  border: 1px solid var(--brand-2);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+/* Estilos para los enlaces de referencia en el texto */
+.article-content a[href^="#ref"] {
+  color: var(--brand-3);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9em;
+  vertical-align: super;
+  line-height: 0;
+}
+
+.article-content a[href^="#ref"]:hover {
+  color: var(--brand);
+  text-decoration: underline;
+}

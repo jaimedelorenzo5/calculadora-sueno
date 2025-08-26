@@ -42,7 +42,29 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
-# Redirecciones
+# URLs limpias para artículos (rewrite interno)
+[[redirects]]
+  from = "/articulos/fases-sueno"
+  to = "/articles/como-funciona-el-sueno-fases-etapas.html"
+  status = 200
+
+[[redirects]]
+  from = "/articulos/horas-sueno-por-edad"
+  to = "/articles/cuantas-horas-dormir-segun-edad.html"
+  status = 200
+
+# Redirecciones 301 de URLs antiguas a nuevas (para SEO)
+[[redirects]]
+  from = "/articles/como-funciona-el-sueno-fases-etapas.html"
+  to = "/articulos/fases-sueno"
+  status = 301
+
+[[redirects]]
+  from = "/articles/cuantas-horas-dormir-segun-edad.html"
+  to = "/articulos/horas-sueno-por-edad"
+  status = 301
+
+# Redirección general para SPA
 [[redirects]]
   from = "/*"
   to = "/index.html"

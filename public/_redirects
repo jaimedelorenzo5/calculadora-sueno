@@ -1,16 +1,10 @@
-# Redirecciones para Calculadora de Sueño
-# Netlify redirects
+# URLs limpias para artículos
+/articulos/fases-sueno /articles/como-funciona-el-sueno-fases-etapas.html 200
+/articulos/horas-sueno-por-edad /articles/cuantas-horas-dormir-segun-edad.html 200
 
-# Redirigir www a no-www
-https://www.calculadora-sueno.com/* https://calculadora-sueno.com/:splat 301!
+# Redirecciones 301 de URLs antiguas a nuevas (para SEO)
+/articles/como-funciona-el-sueno-fases-etapas.html /articulos/fases-sueno 301
+/articles/cuantas-horas-dormir-segun-edad.html /articulos/horas-sueno-por-edad 301
 
-# Redirigir HTTP a HTTPS
-http://calculadora-sueno.com/* https://calculadora-sueno.com/:splat 301!
-
-# SPA fallback - todas las rutas van a index.html
+# Redirección general para SPA
 /* /index.html 200
-
-# Cache headers para recursos estáticos
-/css/* Cache-Control: public, max-age=31536000
-/js/* Cache-Control: public, max-age=31536000
-/icons/* Cache-Control: public, max-age=31536000
