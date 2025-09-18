@@ -1,6 +1,15 @@
 # URLs limpias para artículos
 /articulos/fases-sueno /articles/como-funciona-el-sueno-fases-etapas.html 200
 /articulos/horas-sueno-por-edad /articles/cuantas-horas-dormir-segun-edad.html 200
+/articulos/higiene-sueno /articles/higiene-sueno.html 200
+/articulos/problemas-sueno /articles/problemas-sueno.html 200
+/articulos/cronobiologia /articles/cronobiologia.html 200
+/articulos/ /articulos/index.html 200
+
+# URLs limpias legales
+/legal/privacidad /legal/privacidad.html 200
+/legal/terminos /legal/terminos.html 200
+/contacto /contacto.html 200
 
 # Redirecciones 301 de URLs antiguas a nuevas (para SEO)
 /articles/como-funciona-el-sueno-fases-etapas.html /articulos/fases-sueno 301

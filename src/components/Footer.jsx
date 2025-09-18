@@ -159,13 +159,20 @@ const Footer = () => {
           }}>
             © {currentYear} Calculadora de Sueño. Herramienta gratuita para mejorar tu descanso.
           </p>
-          <p style={{ 
+          <div style={{ 
             color: 'var(--muted)', 
             fontSize: 'var(--font-size-xs)',
-            margin: 0
+            margin: 0,
+            display: 'flex',
+            gap: 'var(--space-4)',
+            justifyContent: 'center',
+            flexWrap: 'wrap'
           }}>
-            Basado en investigación científica sobre ciclos de sueño y cronobiología.
-          </p>
+            <span>Basado en investigación científica sobre ciclos de sueño y cronobiología.</span>
+            <a href="/legal/privacidad.html" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Privacidad</a>
+            <a href="/legal/terminos.html" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Términos</a>
+            <a href="/contacto.html" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Contacto</a>
+          </div>
         </div>
       </div>
     </footer>
