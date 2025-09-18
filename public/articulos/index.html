@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artículos sobre el sueño: guías y consejos</title>
+  <meta name="description" content="Explora nuestros artículos sobre sueño: fases, horas recomendadas por edad, higiene del sueño, problemas comunes y cronobiología." />
+  <link rel="canonical" href="/articulos/" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Artículos sobre el sueño: guías y consejos" />
+  <meta property="og:description" content="Explora nuestros artículos sobre sueño: fases, horas recomendadas por edad, higiene del sueño, problemas comunes y cronobiología." />
+  <meta property="og:url" content="/articulos/" />
+  <link rel="stylesheet" href="/styles/article.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .articles-index { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+    .articles-hero { background: white; border-bottom: 1px solid #f0f0f0; padding: 3rem 0; margin-bottom: 0; }
+    .articles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .article-card { display: block; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.25rem; text-decoration: none; color: var(--text); box-shadow: 0 4px 16px var(--shadow); transition: var(--transition); }
+    .article-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px var(--shadow-hover); }
+    .article-card h3 { margin-bottom: .5rem; }
+    .article-card p { color: var(--muted); margin-bottom: .75rem; }
+    .badge { display: inline-block; font-size: .8rem; color: white; background: var(--brand); border-radius: 999px; padding: .2rem .6rem; margin-bottom: .75rem; }
+    @media (max-width: 960px) { .articles-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="articles-hero">
+    <div class="articles-index">
+      <nav class="breadcrumb">
+        <a href="/">Inicio</a> > <span>Artículos</span>
+      </nav>
+      <h1>Artículos sobre el sueño</h1>
+      <p style="color: var(--muted)">Guías prácticas basadas en evidencia para ayudarte a dormir mejor.</p>
+    </div>
+  </header>
+
+  <main class="articles-index">
+    <section class="articles-grid">
+      <a class="article-card" href="/articulos/fases-sueno">
+        <span class="badge">Ciencia</span>
+        <h3>Cómo funciona el sueño: fases y etapas</h3>
+        <p>Comprende los ciclos de 90 minutos y las fases REM/No REM.</p>
+        <span class="article-card-cta">Leer artículo →</span>
+      </a>
+      <a class="article-card" href="/articulos/horas-sueno-por-edad">
+        <span class="badge">Guía</span>
+        <h3>¿Cuántas horas debes dormir según tu edad?</h3>
+        <p>Tabla completa por edades con recomendaciones oficiales.</p>
+        <span class="article-card-cta">Leer artículo →</span>
+      </a>
+      <a class="article-card" href="/articulos/higiene-sueno">
+        <span class="badge">Hábitos</span>
+        <h3>Higiene del sueño: hábitos que funcionan</h3>
+        <p>Rutinas y ajustes sencillos para mejorar tu descanso.</p>
+        <span class="article-card-cta">Leer artículo →</span>
+      </a>
+      <a class="article-card" href="/articulos/problemas-sueno">
+        <span class="badge">Soluciones</span>
+        <h3>Problemas de sueño comunes y soluciones</h3>
+        <p>Insomnio, despertares nocturnos, ronquidos: qué hacer.</p>
+        <span class="article-card-cta">Leer artículo →</span>
+      </a>
+      <a class="article-card" href="/articulos/cronobiologia">
+        <span class="badge">Cronobiología</span>
+        <h3>Reloj biológico: alinea tus horarios</h3>
+        <p>Cómo la luz y los ritmos circadianos afectan tu sueño.</p>
+        <span class="article-card-cta">Leer artículo →</span>
+      </a>
+    </section>
+
+    <div class="final-cta" style="margin-top:2rem">
+      <h3>Calcula tu horario de sueño ideal</h3>
+      <p>Usa nuestra calculadora para acostarte y levantarte en el mejor momento.</p>
+      <a href="/" class="cta-button-large">Usar Calculadora de Sueño Gratis</a>
+    </div>
+  </main>
+
+  <footer class="article-footer">
+    <div class="container">
+      <a href="/" class="back-home">← Volver a la Calculadora</a>
+    </div>
+  </footer>
+</body>
+</html>
