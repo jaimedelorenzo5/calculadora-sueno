@@ -8,6 +8,18 @@ const Header = () => {
         Descubre cuándo acostarte y despertarte basándose en ciclos de sueño de 90 minutos 
         para sentirte descansado y energético cada día. Una herramienta científica para tu bienestar.
       </p>
+      <nav className="scroll-fade-in" style={{ animationDelay: '0.5s', marginTop: 'var(--space-4)' }}>
+        <a href="/articulos/" style={{
+          color: 'var(--brand)',
+          textDecoration: 'none',
+          fontWeight: 600,
+          border: '1px solid var(--brand)',
+          padding: '0.5rem 0.75rem',
+          borderRadius: 'var(--radius)'
+        }}>
+          Explorar artículos →
+        </a>
+      </nav>
       
       <div className="scroll-fade-in" style={{
         marginTop: 'var(--space-6)',
