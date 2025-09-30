@@ -187,6 +187,12 @@ function App() {
               <p>Descubre cuántas horas necesitas dormir según tu edad con nuestra guía completa basada en evidencia científica.</p>
               <span className="article-card-cta">Leer artículo →</span>
             </a>
+
+            <a className="article-card" href="/articulos/posicion-fetal">
+              <h3>Posición fetal para dormir: beneficios y riesgos</h3>
+              <p>Cuándo conviene, cuándo evitarla y cómo hacerlo bien para proteger tu espalda.</p>
+              <span className="article-card-cta">Leer artículo →</span>
+            </a>
           </div>
         </section>
         
