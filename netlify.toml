@@ -5,7 +5,7 @@
 [build.environment]
   NODE_VERSION = "18"
 
-# Headers para optimización
+# Headers de seguridad
 [[headers]]
   for = "/*"
   [headers.values]
@@ -16,12 +16,7 @@
 
 # Headers para recursos estáticos
 [[headers]]
-  for = "/css/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/js/*"
+  for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
@@ -42,7 +37,7 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
-# URLs limpias para artículos (rewrite interno)
+# URLs limpias para artículos estáticos heredados (rewrite interno)
 [[redirects]]
   from = "/articulos/fases-sueno"
   to = "/articles/como-funciona-el-sueno-fases-etapas.html"
@@ -53,7 +48,7 @@
   to = "/articles/cuantas-horas-dormir-segun-edad.html"
   status = 200
 
-# Redirecciones 301 de URLs antiguas a nuevas (para SEO)
+# Redirecciones 301 de URLs antiguas de artículos
 [[redirects]]
   from = "/articles/como-funciona-el-sueno-fases-etapas.html"
   to = "/articulos/fases-sueno"
@@ -64,12 +59,13 @@
   to = "/articulos/horas-sueno-por-edad"
   status = 301
 
-# Redirección general para SPA
+# SPA fallback — OBLIGATORIO para React Router
+# Debe ser la ÚLTIMA regla
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
-# Configuración de funciones (opcional)
+# Netlify Forms
 [functions]
   directory = "netlify/functions"
