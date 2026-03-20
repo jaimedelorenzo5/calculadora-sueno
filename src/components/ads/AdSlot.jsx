@@ -1,7 +1,6 @@
 import React from 'react';
 
-// TODO: reemplazar con ca-pub-XXXXXXXX cuando AdSense apruebe
-const ADSENSE_CLIENT = 'ca-pub-XXXXXXXX';
+const ADSENSE_CLIENT = 'ca-pub-6578039396347330';
 
 const slotIds = {
   'article-top':    '1111111111',

@@ -12,15 +12,15 @@ function loadThirdPartyScripts() {
     s.src = 'https://www.googletagmanager.com/gtag/js?id=G-LRMP9LBLRR';
     document.head.appendChild(s);
   }
-  // AdSense — TODO: reemplazar con ca-pub-XXXXXXXX cuando AdSense apruebe
-  // if (!document.getElementById('adsense-script')) {
-  //   const a = document.createElement('script');
-  //   a.id = 'adsense-script';
-  //   a.async = true;
-  //   a.crossOrigin = 'anonymous';
-  //   a.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXX';
-  //   document.head.appendChild(a);
-  // }
+  // AdSense
+  if (!document.getElementById('adsense-script')) {
+    const a = document.createElement('script');
+    a.id = 'adsense-script';
+    a.async = true;
+    a.crossOrigin = 'anonymous';
+    a.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6578039396347330';
+    document.head.appendChild(a);
+  }
 }
 
 function CookieBanner() {

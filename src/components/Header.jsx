@@ -20,16 +20,6 @@ const Header = () => {
         }}>
           Blog →
         </Link>
-        <Link to="/recursos" style={{
-          color: 'var(--brand-3)',
-          textDecoration: 'none',
-          fontWeight: 600,
-          border: '1px solid var(--brand-3)',
-          padding: '0.5rem 0.75rem',
-          borderRadius: 'var(--radius)'
-        }}>
-          Recursos →
-        </Link>
         <a href="/articulos/" style={{
           color: 'var(--brand-4)',
           textDecoration: 'none',

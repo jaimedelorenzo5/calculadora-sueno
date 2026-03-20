@@ -1,15 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import ProductGrid from '../components/blog/ProductGrid';
 import '../styles/blog.css';
 
 function Recursos() {
   return (
     <div className="recursos-page">
       <Helmet>
-        <title>Productos para dormir mejor: guía de recursos | Calculadora de Sueño</title>
-        <meta name="description" content="Selección honesta de productos para mejorar la calidad del sueño: colchones, accesorios y suplementos con enlaces de afiliado a Amazon." />
+        <title>Recursos para dormir mejor | Calculadora de Sueño</title>
+        <meta name="description" content="Guía de recursos y consejos para mejorar la calidad del sueño: hábitos, ambiente y rutinas basadas en ciencia." />
         <link rel="canonical" href="https://calculadora-sueno.com/recursos" />
       </Helmet>
 
@@ -19,43 +18,26 @@ function Recursos() {
             <Link to="/">Inicio</Link> › <span>Recursos</span>
           </nav>
           <h1 style={{ fontSize: '2.2rem', fontWeight: '700', color: '#37474F', margin: '0.5rem 0 0.75rem' }}>
-            Productos recomendados para dormir mejor
+            Recursos para dormir mejor
           </h1>
           <p style={{ color: '#78909C', maxWidth: '640px', lineHeight: '1.6' }}>
-            No existen soluciones mágicas para el sueño, pero algunos productos pueden marcar una diferencia real.
-            Esta página recoge los que consideramos más útiles, con explicaciones honestas de por qué los recomendamos
-            y para quién son adecuados.
+            Consejos prácticos y herramientas basadas en ciencia para mejorar la calidad de tu sueño cada noche.
           </p>
         </div>
       </header>
 
       <main className="recursos-body">
-        <div className="affiliate-disclaimer">
-          <strong>Aviso de transparencia:</strong> Algunos enlaces de esta página son de afiliado de Amazon (programa Amazon Associates).
-          Si compras a través de ellos, recibimos una pequeña comisión <strong>sin ningún coste adicional para ti</strong>.
-          Esto nos ayuda a mantener la calculadora gratuita. Solo recomendamos productos que consideramos genuinamente útiles.
-        </div>
-
-        <h2 className="recursos-section-title">🛏️ Colchones</h2>
+        <h2 className="recursos-section-title">Artículos recomendados</h2>
         <p style={{ color: '#78909C', marginBottom: '1.25rem', fontSize: '0.95rem' }}>
-          El colchón es el factor más importante para la calidad del sueño. Un colchón inadecuado provoca
-          dolores musculares, despertares nocturnos y menor tiempo en sueño profundo.
+          Aprende sobre los ciclos del sueño, la importancia de las rutinas y cómo el ambiente influye en tu descanso.
         </p>
-        <ProductGrid category="colchon" />
-
-        <h2 className="recursos-section-title">🎧 Accesorios de sueño</h2>
-        <p style={{ color: '#78909C', marginBottom: '1.25rem', fontSize: '0.95rem' }}>
-          La oscuridad y el silencio son esenciales para conciliar el sueño. Estos accesorios son especialmente
-          útiles para turnos de noche, viajes o si vives en una ciudad ruidosa.
-        </p>
-        <ProductGrid category="accesorio" />
-
-        <h2 className="recursos-section-title">💊 Suplementos</h2>
-        <p style={{ color: '#78909C', marginBottom: '1.25rem', fontSize: '0.95rem' }}>
-          Los suplementos pueden ser útiles en situaciones concretas, pero no sustituyen unos buenos hábitos de sueño.
-          Consulta con tu médico antes de tomarlos si tienes alguna condición de salud.
-        </p>
-        <ProductGrid category="suplemento" />
+        <ul style={{ lineHeight: '2', color: '#546E7A' }}>
+          <li><Link to="/blog/cuantas-horas-dormir-adulto">¿Cuántas horas de sueño necesita un adulto?</Link></li>
+          <li><Link to="/blog/ciclos-de-sueno-que-son">¿Qué son los ciclos de sueño?</Link></li>
+          <li><Link to="/blog/como-mejorar-calidad-del-sueno">Cómo mejorar la calidad del sueño</Link></li>
+          <li><Link to="/blog/temperatura-ideal-dormir">Temperatura ideal para dormir</Link></li>
+          <li><Link to="/blog/insomnio-causas-soluciones">Insomnio: causas y soluciones</Link></li>
+        </ul>
 
         <div style={{
           marginTop: '3rem',
@@ -64,7 +46,7 @@ function Recursos() {
         }}>
           <h3 style={{ color: '#FF8A80', marginBottom: '0.75rem' }}>El primer paso es gratuito</h3>
           <p style={{ color: '#78909C', marginBottom: '1.25rem' }}>
-            Antes de comprar nada, calcula tu horario de sueño ideal. Es gratis y puede cambiar cómo te sientes cada mañana.
+            Calcula tu horario de sueño ideal. Es gratis y puede cambiar cómo te sientes cada mañana.
           </p>
           <Link to="/" style={{
             display: 'inline-block', background: '#E57373', color: 'white',
