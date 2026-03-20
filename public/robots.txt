@@ -1,6 +1,8 @@
 User-agent: *
 Allow: /
 
+Disallow: /api/
+
 # Bloquear URLs con parámetros de consulta
 Disallow: /*?*
 Disallow: /*mode=*

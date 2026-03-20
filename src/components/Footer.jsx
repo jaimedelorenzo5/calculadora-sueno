@@ -1,14 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
+
   return (
     <footer className="footer">
       <div className="container">
         <div style={{ marginBottom: 'var(--space-8)' }}>
-          <h3 style={{ 
-            color: 'var(--brand)', 
+          <h3 style={{
+            color: 'var(--brand)',
             marginBottom: 'var(--space-4)',
             fontSize: 'var(--font-size-xl)',
             display: 'flex',
@@ -18,8 +19,8 @@ const Footer = () => {
           }}>
             🌙 Calculadora de Sueño
           </h3>
-          <p style={{ 
-            color: 'var(--muted)', 
+          <p style={{
+            color: 'var(--muted)',
             marginBottom: 'var(--space-6)',
             textAlign: 'center',
             maxWidth: '500px',
@@ -28,104 +29,48 @@ const Footer = () => {
             Herramienta gratuita para calcular tu horario de sueño ideal basado en la ciencia de los ciclos de sueño.
           </p>
         </div>
-        
-        <div style={{ 
-          display: 'flex', 
-          flexWrap: 'wrap', 
-          gap: 'var(--space-8)', 
+
+        <div style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: 'var(--space-8)',
           justifyContent: 'center',
           marginBottom: 'var(--space-8)'
         }}>
           <div>
-            <h4 style={{ 
-              color: 'var(--text)', 
-              marginBottom: 'var(--space-3)',
-              display: 'flex',
-              alignItems: 'center',
-              gap: 'var(--space-2)'
-            }}>
-              Enlaces útiles
-            </h4>
+            <h4 style={{ color: 'var(--text)', marginBottom: 'var(--space-3)' }}>Contenido</h4>
             <ul style={{ listStyle: 'none', padding: 0 }}>
               <li style={{ marginBottom: 'var(--space-2)' }}>
-                <a href="#tips" style={{ 
-                  color: 'var(--muted)', 
-                  textDecoration: 'none',
-                  transition: 'var(--transition)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 'var(--space-2)'
-                }}>
-                  Consejos para dormir
-                </a>
+                <Link to="/blog" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Blog del sueño</Link>
               </li>
               <li style={{ marginBottom: 'var(--space-2)' }}>
-                <a href="#faq" style={{ 
-                  color: 'var(--muted)', 
-                  textDecoration: 'none',
-                  transition: 'var(--transition)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 'var(--space-2)'
-                }}>
-                  Preguntas frecuentes
-                </a>
+                <Link to="/recursos" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Recursos recomendados</Link>
+              </li>
+              <li style={{ marginBottom: 'var(--space-2)' }}>
+                <a href="/articulos/" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Artículos</a>
               </li>
             </ul>
           </div>
-          
+
           <div>
-            <h4 style={{ 
-              color: 'var(--text)', 
-              marginBottom: 'var(--space-3)',
-              display: 'flex',
-              alignItems: 'center',
-              gap: 'var(--space-2)'
-            }}>
-              Recursos
-            </h4>
+            <h4 style={{ color: 'var(--text)', marginBottom: 'var(--space-3)' }}>Legal</h4>
             <ul style={{ listStyle: 'none', padding: 0 }}>
               <li style={{ marginBottom: 'var(--space-2)' }}>
-                <a href="#ciclos-sueno" style={{ 
-                  color: 'var(--muted)', 
-                  textDecoration: 'none',
-                  transition: 'var(--transition)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 'var(--space-2)'
-                }}>
-                  Ciclos de sueño
-                </a>
+                <Link to="/privacidad" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Privacidad</Link>
               </li>
               <li style={{ marginBottom: 'var(--space-2)' }}>
-                <a href="#higiene-sueno" style={{ 
-                  color: 'var(--muted)', 
-                  textDecoration: 'none',
-                  transition: 'var(--transition)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 'var(--space-2)'
-                }}>
-                  Higiene del sueño
-                </a>
+                <Link to="/aviso-legal" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Aviso legal</Link>
               </li>
               <li style={{ marginBottom: 'var(--space-2)' }}>
-                <a href="/sobre-proyecto.html" style={{ 
-                  color: 'var(--muted)', 
-                  textDecoration: 'none',
-                  transition: 'var(--transition)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 'var(--space-2)'
-                }}>
-                  Sobre el proyecto
-                </a>
+                <Link to="/cookies" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Cookies</Link>
+              </li>
+              <li style={{ marginBottom: 'var(--space-2)' }}>
+                <Link to="/contacto" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Contacto</Link>
               </li>
             </ul>
           </div>
         </div>
-        
-        {/* Disclaimer médico */}
+
         <div style={{
           background: 'rgba(255, 255, 255, 0.1)',
           border: '2px solid var(--border)',
@@ -135,44 +80,21 @@ const Footer = () => {
           textAlign: 'center',
           backdropFilter: 'blur(10px)'
         }}>
-          <p style={{ 
-            color: 'var(--muted)', 
-            fontSize: 'var(--font-size-sm)',
-            margin: 0,
-            lineHeight: 1.6
-          }}>
-            <strong>Importante:</strong> Esta herramienta es informativa y educativa. 
-            No sustituye el consejo médico profesional. Si tienes problemas de sueño persistentes, 
+          <p style={{ color: 'var(--muted)', fontSize: 'var(--font-size-sm)', margin: 0, lineHeight: 1.6 }}>
+            <strong>Importante:</strong> Esta herramienta es informativa y educativa.
+            No sustituye el consejo médico profesional. Si tienes problemas de sueño persistentes,
             consulta con un especialista en medicina del sueño.
           </p>
         </div>
-        
-        <div style={{ 
-          borderTop: '2px solid var(--border)', 
-          paddingTop: 'var(--space-6)',
-          textAlign: 'center'
-        }}>
-          <p style={{ 
-            color: 'var(--muted)', 
-            fontSize: 'var(--font-size-sm)',
-            marginBottom: 'var(--space-2)'
-          }}>
+
+        <div style={{ borderTop: '2px solid var(--border)', paddingTop: 'var(--space-6)', textAlign: 'center' }}>
+          <p style={{ color: 'var(--muted)', fontSize: 'var(--font-size-sm)', marginBottom: 'var(--space-2)' }}>
             © {currentYear} Calculadora de Sueño. Herramienta gratuita para mejorar tu descanso.
           </p>
-          <div style={{ 
-            color: 'var(--muted)', 
-            fontSize: 'var(--font-size-xs)',
-            margin: 0,
-            display: 'flex',
-            gap: 'var(--space-4)',
-            justifyContent: 'center',
-            flexWrap: 'wrap'
-          }}>
-            <span>Basado en investigación científica sobre ciclos de sueño y cronobiología.</span>
-            <a href="/legal/privacidad.html" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Privacidad</a>
-            <a href="/legal/terminos.html" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Términos</a>
-            <a href="/contacto.html" style={{ color: 'var(--muted)', textDecoration: 'none' }}>Contacto</a>
-          </div>
+          <p style={{ color: 'var(--muted)', fontSize: 'var(--font-size-xs)', margin: 0 }}>
+            Basado en investigación científica sobre ciclos de sueño y cronobiología.
+            {' '}Participante en el Programa de Afiliados de Amazon (calculadora02-21).
+          </p>
         </div>
       </div>
     </footer>
