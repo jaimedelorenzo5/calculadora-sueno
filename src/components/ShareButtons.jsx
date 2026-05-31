@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ShareButtons = ({ config }) => {
+const ShareButtons = () => {
   const handleWhatsAppShare = () => {
     const text = `Calculadora de Sueño: Descubre tu horario ideal para dormir y despertar basado en ciclos de 90 minutos. ${window.location.href}`;
     const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(text)}`;
