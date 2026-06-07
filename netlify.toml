@@ -48,6 +48,61 @@
   to = "/articles/cuantas-horas-dormir-segun-edad.html"
   status = 200
 
+[[redirects]]
+  from = "/articulos/alcohol-y-sueno"
+  to = "/articles/alcohol-y-sueno.html"
+  status = 200
+
+[[redirects]]
+  from = "/articulos/cafeina-y-sueno"
+  to = "/articles/cafeina-y-sueno.html"
+  status = 200
+
+[[redirects]]
+  from = "/articulos/estres-y-sueno"
+  to = "/articles/estres-y-sueno.html"
+  status = 200
+
+[[redirects]]
+  from = "/articulos/insomnio"
+  to = "/articles/insomnio.html"
+  status = 200
+
+[[redirects]]
+  from = "/articulos/jet-lag"
+  to = "/articles/jet-lag.html"
+  status = 200
+
+[[redirects]]
+  from = "/articulos/melatonina-sueno"
+  to = "/articles/melatonina-sueno.html"
+  status = 200
+
+[[redirects]]
+  from = "/articulos/sueno-y-memoria"
+  to = "/articles/sueno-y-memoria.html"
+  status = 200
+
+[[redirects]]
+  from = "/articulos/sueno-y-peso"
+  to = "/articles/sueno-y-peso.html"
+  status = 200
+
+[[redirects]]
+  from = "/articulos/sueno-y-productividad"
+  to = "/articles/sueno-y-productividad.html"
+  status = 200
+
+[[redirects]]
+  from = "/articulos/sueno-y-salud-mental"
+  to = "/articles/sueno-y-salud-mental.html"
+  status = 200
+
+[[redirects]]
+  from = "/articulos/temperatura-ideal-dormir"
+  to = "/articles/temperatura-ideal-dormir.html"
+  status = 200
+
 # Redirecciones 301 de URLs antiguas de artículos
 [[redirects]]
   from = "/articles/como-funciona-el-sueno-fases-etapas.html"
