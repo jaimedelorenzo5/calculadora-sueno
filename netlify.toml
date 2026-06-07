@@ -103,6 +103,56 @@
   to = "/articles/temperatura-ideal-dormir.html"
   status = 200
 
+[[redirects]]
+  from = "/articulos/alimentos-para-dormir"
+  to = "/articles/alimentos-para-dormir.html"
+  status = 200
+
+[[redirects]]
+  from = "/articulos/apnea-del-sueno"
+  to = "/articles/apnea-del-sueno.html"
+  status = 200
+
+[[redirects]]
+  from = "/articulos/cronobiologia"
+  to = "/articles/cronobiologia.html"
+  status = 200
+
+[[redirects]]
+  from = "/articulos/ejercicio-y-sueno"
+  to = "/articles/ejercicio-y-sueno.html"
+  status = 200
+
+[[redirects]]
+  from = "/articulos/higiene-sueno"
+  to = "/articles/higiene-sueno.html"
+  status = 200
+
+[[redirects]]
+  from = "/articulos/posicion-fetal"
+  to = "/articles/posicion-fetal-dormir.html"
+  status = 200
+
+[[redirects]]
+  from = "/articulos/problemas-sueno"
+  to = "/articles/problemas-sueno.html"
+  status = 200
+
+[[redirects]]
+  from = "/articulos/siesta-perfecta"
+  to = "/articles/siesta-perfecta.html"
+  status = 200
+
+[[redirects]]
+  from = "/articulos/sueno-sistema-inmunitario"
+  to = "/articles/sueno-sistema-inmunitario.html"
+  status = 200
+
+[[redirects]]
+  from = "/articulos/tecnologia-dormitorio"
+  to = "/articles/tecnologia-dormitorio.html"
+  status = 200
+
 # Redirecciones 301 de URLs antiguas de artículos
 [[redirects]]
   from = "/articles/como-funciona-el-sueno-fases-etapas.html"
