@@ -153,6 +153,21 @@
   to = "/articles/tecnologia-dormitorio.html"
   status = 200
 
+[[redirects]]
+  from = "/articulos/privacion-del-sueno"
+  to = "/articles/privacion-del-sueno.html"
+  status = 200
+
+[[redirects]]
+  from = "/articulos/sueno-y-corazon"
+  to = "/articles/sueno-y-corazon.html"
+  status = 200
+
+[[redirects]]
+  from = "/articulos/sueno-y-hormonas"
+  to = "/articles/sueno-y-hormonas.html"
+  status = 200
+
 # Redirecciones 301 de URLs antiguas de artículos
 [[redirects]]
   from = "/articles/como-funciona-el-sueno-fases-etapas.html"

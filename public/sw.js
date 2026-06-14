@@ -1,23 +1,12 @@
 // Service Worker para Calculadora de Sueño
-const CACHE_NAME = 'sleep-calculator-v1';
+const CACHE_NAME = 'sleep-calculator-v2';
 const urlsToCache = [
   '/',
   '/index.html',
-  '/src/main.jsx',
-  '/src/App.jsx',
-  '/src/styles/app.css',
-  '/src/styles/tokens.css',
-  '/src/lib/sleep.js',
-  '/src/lib/urlState.js',
-  '/src/lib/seo.js',
-  '/src/components/Header.jsx',
-  '/src/components/SleepForm.jsx',
-  '/src/components/Results.jsx',
-  '/src/components/Tips.jsx',
-  '/src/components/FAQ.jsx',
-  '/src/components/ShareButtons.jsx',
-  '/src/components/AdSlot.jsx',
-  '/src/components/Footer.jsx'
+  '/manifest.webmanifest',
+  '/favicon.svg',
+  '/favicon.ico',
+  '/styles/article.css',
 ];
 
 // Instalación del Service Worker
