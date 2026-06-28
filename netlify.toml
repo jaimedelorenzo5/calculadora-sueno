@@ -168,6 +168,36 @@
   to = "/articles/sueno-y-hormonas.html"
   status = 200
 
+[[redirects]]
+  from = "/articulos/sueno-y-diabetes"
+  to = "/articles/sueno-y-diabetes.html"
+  status = 200
+
+[[redirects]]
+  from = "/articulos/sueno-y-longevidad"
+  to = "/articles/sueno-y-longevidad.html"
+  status = 200
+
+[[redirects]]
+  from = "/articulos/sueno-y-creatividad"
+  to = "/articles/sueno-y-creatividad.html"
+  status = 200
+
+[[redirects]]
+  from = "/articulos/tecnicas-para-dormir-rapido"
+  to = "/articles/tecnicas-para-dormir-rapido.html"
+  status = 200
+
+[[redirects]]
+  from = "/articulos/paralisis-del-sueno"
+  to = "/articles/paralisis-del-sueno.html"
+  status = 200
+
+[[redirects]]
+  from = "/articulos/ronquidos"
+  to = "/articles/ronquidos.html"
+  status = 200
+
 # Redirecciones 301 de URLs antiguas de artículos
 [[redirects]]
   from = "/articles/como-funciona-el-sueno-fases-etapas.html"

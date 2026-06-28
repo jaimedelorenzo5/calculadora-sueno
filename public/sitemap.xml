@@ -2,61 +2,61 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://calculadora-sueno.com/</loc>
-    <lastmod>2026-06-14</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://calculadora-sueno.com/blog</loc>
-    <lastmod>2026-06-14</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://calculadora-sueno.com/articulos/</loc>
-    <lastmod>2026-06-14</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://calculadora-sueno.com/recursos</loc>
-    <lastmod>2026-06-14</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://calculadora-sueno.com/contacto</loc>
-    <lastmod>2026-06-14</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://calculadora-sueno.com/legal/privacidad</loc>
-    <lastmod>2026-06-14</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://calculadora-sueno.com/legal/terminos</loc>
-    <lastmod>2026-06-14</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://calculadora-sueno.com/privacidad</loc>
-    <lastmod>2026-06-14</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://calculadora-sueno.com/aviso-legal</loc>
-    <lastmod>2026-06-14</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://calculadora-sueno.com/cookies</loc>
-    <lastmod>2026-06-14</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -211,6 +211,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://calculadora-sueno.com/articulos/paralisis-del-sueno</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://calculadora-sueno.com/articulos/posicion-fetal</loc>
     <lastmod>2025-08-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -225,6 +231,12 @@
   <url>
     <loc>https://calculadora-sueno.com/articulos/problemas-sueno</loc>
     <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://calculadora-sueno.com/articulos/ronquidos</loc>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -247,8 +259,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://calculadora-sueno.com/articulos/sueno-y-creatividad</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://calculadora-sueno.com/articulos/sueno-y-diabetes</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://calculadora-sueno.com/articulos/sueno-y-hormonas</loc>
     <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://calculadora-sueno.com/articulos/sueno-y-longevidad</loc>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -277,6 +307,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://calculadora-sueno.com/articulos/tecnicas-para-dormir-rapido</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://calculadora-sueno.com/articulos/tecnologia-dormitorio</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -285,42 +321,6 @@
   <url>
     <loc>https://calculadora-sueno.com/articulos/temperatura-ideal-dormir</loc>
     <lastmod>2026-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://calculadora-sueno.com/articulos/sueno-y-diabetes</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://calculadora-sueno.com/articulos/sueno-y-longevidad</loc>
-    <lastmod>2026-06-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://calculadora-sueno.com/articulos/sueno-y-creatividad</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://calculadora-sueno.com/articulos/tecnicas-para-dormir-rapido</loc>
-    <lastmod>2026-06-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://calculadora-sueno.com/articulos/paralisis-del-sueno</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://calculadora-sueno.com/articulos/ronquidos</loc>
-    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
