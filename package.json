@@ -10,6 +10,7 @@
     "build": "node scripts/generate-sitemap.js && vite build",
     "test": "node --test test-sleep.js",
     "lint": "eslint .",
+    "verify": "npm test && npm run lint && npm run build && node scripts/verify-content.js",
     "preview": "vite preview"
   },
   "dependencies": {
