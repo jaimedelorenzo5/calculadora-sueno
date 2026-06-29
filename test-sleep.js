@@ -1,39 +1,55 @@
-// Archivo de prueba para sleep.js
-// Ejecutar en consola del navegador o con Node.js
+import test from 'node:test'
+import assert from 'node:assert/strict'
+import {
+  calculateSleepTimes,
+  calculateNap,
+  formatSleepDuration,
+  validateTime,
+} from './src/lib/sleep.js'
 
-import { calculateSleepTimes, calculateNap, formatSleepDuration } from './src/lib/sleep.js';
+test('calcula horas de acostarse restando ciclos y latencia', () => {
+  const results = calculateSleepTimes('wake', '07:00', 15)
 
-console.log('🧪 Probando Calculadora de Sueño...\n');
+  assert.deepEqual(results.map(({ time }) => time), [
+    '21:45',
+    '23:15',
+    '00:45',
+    '02:15',
+  ])
+  assert.deepEqual(results.map(({ cycles }) => cycles), [6, 5, 4, 3])
+})
 
-// Test 1: Modo "Me levanto a" 07:00 + latencia 15
-console.log('📅 Test 1: Me levanto a las 07:00 (latencia 15 min)');
-const wakeResults = calculateSleepTimes('wake', '07:00', 15);
-console.log('Resultados:', wakeResults);
-console.log('Horarios esperados: ~22:30, 00:00, 01:30, 03:00\n');
+test('calcula horas de despertar sumando ciclos y latencia', () => {
+  const results = calculateSleepTimes('sleep', '23:00', 10)
 
-// Test 2: Modo "Me acuesto a" 23:00 + latencia 10
-console.log('📅 Test 2: Me acuesto a las 23:00 (latencia 10 min)');
-const sleepResults = calculateSleepTimes('sleep', '23:00', 10);
-console.log('Resultados:', sleepResults);
-console.log('Horarios esperados: ~04:40, 06:10, 07:40, 09:10\n');
+  assert.deepEqual(results.map(({ time }) => time), [
+    '08:10',
+    '06:40',
+    '05:10',
+    '03:40',
+  ])
+})
 
-// Test 3: Siesta de 20 minutos
-console.log('💤 Test 3: Siesta energética de 20 min (empezando a las 14:00)');
-const nap20 = calculateNap('power', '14:00');
-console.log('Resultado:', nap20);
-console.log('Esperado: 14:00 - 14:20 (20 min)\n');
+test('calcula siestas energéticas y completas', () => {
+  assert.deepEqual(calculateNap('power', '14:00'), {
+    startTime: '14:00',
+    endTime: '14:20',
+    duration: 20,
+    type: 'Siesta energética',
+  })
+  assert.deepEqual(calculateNap('full', '15:00'), {
+    startTime: '15:00',
+    endTime: '16:30',
+    duration: 90,
+    type: 'Siesta completa',
+  })
+})
 
-// Test 4: Siesta de 90 minutos
-console.log('💤 Test 4: Siesta completa de 90 min (empezando a las 15:00)');
-const nap90 = calculateNap('full', '15:00');
-console.log('Resultado:', nap90);
-console.log('Esperado: 15:00 - 16:30 (90 min)\n');
-
-// Test 5: Formateo de duración
-console.log('⏱️ Test 5: Formateo de duración');
-console.log('90 min →', formatSleepDuration(90));
-console.log('150 min →', formatSleepDuration(150));
-console.log('45 min →', formatSleepDuration(45));
-
-console.log('\n✅ Pruebas completadas. Verifica que los horarios sean razonables.');
-console.log('💡 Los horarios se basan en ciclos de 90 minutos + latencia.');
+test('formatea duraciones y valida horas', () => {
+  assert.equal(formatSleepDuration(90), '1h 30min')
+  assert.equal(formatSleepDuration(150), '2h 30min')
+  assert.equal(formatSleepDuration(45), '45 min')
+  assert.equal(validateTime('07:30'), true)
+  assert.equal(validateTime('24:00'), false)
+  assert.equal(validateTime('no-es-una-hora'), false)
+})

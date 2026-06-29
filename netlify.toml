@@ -3,7 +3,7 @@
   publish = "dist"
 
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "22"
 
 # Headers de seguridad
 [[headers]]
@@ -196,6 +196,11 @@
 [[redirects]]
   from = "/articulos/ronquidos"
   to = "/articles/ronquidos.html"
+  status = 200
+
+[[redirects]]
+  from = "/articulos/sueno-bifasico-polifasico"
+  to = "/articles/sueno-bifasico-polifasico.html"
   status = 200
 
 # Redirecciones 301 de URLs antiguas de artículos
