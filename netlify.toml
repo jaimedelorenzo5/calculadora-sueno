@@ -208,6 +208,11 @@
   to = "/articles/sueno-en-el-embarazo.html"
   status = 200
 
+[[redirects]]
+  from = "/articulos/suenos-lucidos"
+  to = "/articles/suenos-lucidos.html"
+  status = 200
+
 # Redirecciones 301 de URLs antiguas de artículos
 [[redirects]]
   from = "/articles/como-funciona-el-sueno-fases-etapas.html"
