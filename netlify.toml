@@ -223,6 +223,11 @@
   to = "/articles/ruido-blanco-para-dormir.html"
   status = 200
 
+[[redirects]]
+  from = "/articulos/magnesio-y-sueno"
+  to = "/articles/magnesio-y-sueno.html"
+  status = 200
+
 # Redirecciones 301 de URLs antiguas de artículos
 [[redirects]]
   from = "/articles/como-funciona-el-sueno-fases-etapas.html"
