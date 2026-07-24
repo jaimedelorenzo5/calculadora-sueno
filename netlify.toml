@@ -255,6 +255,11 @@
 
 # Redirecciones 301 de URLs antiguas de artículos
 [[redirects]]
+  from = "/articulos/trabajo-por-turnos-y-sueno"
+  to = "/articles/trabajo-por-turnos-y-sueno.html"
+  status = 200
+
+[[redirects]]
   from = "/articles/como-funciona-el-sueno-fases-etapas.html"
   to = "/articulos/fases-sueno"
   status = 301
