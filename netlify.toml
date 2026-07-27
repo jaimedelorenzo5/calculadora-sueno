@@ -255,6 +255,11 @@
 
 # Redirecciones 301 de URLs antiguas de artículos
 [[redirects]]
+  from = "/articulos/somnambulismo"
+  to = "/articles/somnambulismo.html"
+  status = 200
+
+[[redirects]]
   from = "/articulos/trabajo-por-turnos-y-sueno"
   to = "/articles/trabajo-por-turnos-y-sueno.html"
   status = 200
