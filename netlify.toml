@@ -265,6 +265,11 @@
   status = 200
 
 [[redirects]]
+  from = "/articulos/bruxismo-nocturno"
+  to = "/articles/bruxismo-nocturno.html"
+  status = 200
+
+[[redirects]]
   from = "/articles/como-funciona-el-sueno-fases-etapas.html"
   to = "/articulos/fases-sueno"
   status = 301
