@@ -265,6 +265,11 @@
   status = 200
 
 [[redirects]]
+  from = "/articulos/meditacion-para-dormir"
+  to = "/articles/meditacion-para-dormir.html"
+  status = 200
+
+[[redirects]]
   from = "/articulos/bruxismo-nocturno"
   to = "/articles/bruxismo-nocturno.html"
   status = 200
