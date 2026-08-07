@@ -285,6 +285,11 @@
   status = 200
 
 [[redirects]]
+  from = "/articulos/despertarse-a-mitad-de-noche"
+  to = "/articles/despertarse-a-mitad-de-noche.html"
+  status = 200
+
+[[redirects]]
   from = "/articles/como-funciona-el-sueno-fases-etapas.html"
   to = "/articulos/fases-sueno"
   status = 301
