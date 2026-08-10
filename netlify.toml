@@ -290,6 +290,11 @@
   status = 200
 
 [[redirects]]
+  from = "/articulos/vitamina-d-y-sueno"
+  to = "/articles/vitamina-d-y-sueno.html"
+  status = 200
+
+[[redirects]]
   from = "/articles/como-funciona-el-sueno-fases-etapas.html"
   to = "/articulos/fases-sueno"
   status = 301
