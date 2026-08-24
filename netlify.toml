@@ -320,6 +320,11 @@
   status = 200
 
 [[redirects]]
+  from = "/articulos/sueno-adultos-mayores"
+  to = "/articles/sueno-adultos-mayores.html"
+  status = 200
+
+[[redirects]]
   from = "/articles/como-funciona-el-sueno-fases-etapas.html"
   to = "/articulos/fases-sueno"
   status = 301
