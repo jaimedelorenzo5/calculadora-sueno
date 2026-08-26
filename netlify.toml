@@ -325,6 +325,11 @@
   status = 200
 
 [[redirects]]
+  from = "/articulos/sueno-ninos-bebes"
+  to = "/articles/sueno-ninos-bebes.html"
+  status = 200
+
+[[redirects]]
   from = "/articles/como-funciona-el-sueno-fases-etapas.html"
   to = "/articulos/fases-sueno"
   status = 301
