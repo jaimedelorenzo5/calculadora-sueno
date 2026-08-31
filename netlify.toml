@@ -335,6 +335,11 @@
   status = 200
 
 [[redirects]]
+  from = "/articulos/sueno-no-reparador"
+  to = "/articles/sueno-no-reparador.html"
+  status = 200
+
+[[redirects]]
   from = "/articles/como-funciona-el-sueno-fases-etapas.html"
   to = "/articulos/fases-sueno"
   status = 301
