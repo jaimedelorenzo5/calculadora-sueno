@@ -349,6 +349,11 @@
   to = "/articulos/horas-sueno-por-edad"
   status = 301
 
+[[redirects]]
+  from = "/articulos/sueno-rem"
+  to = "/articles/sueno-rem.html"
+  status = 200
+
 # SPA fallback — OBLIGATORIO para React Router
 # Debe ser la ÚLTIMA regla
 [[redirects]]
