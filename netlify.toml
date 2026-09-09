@@ -364,6 +364,11 @@
   to = "/articles/sueno-y-fertilidad.html"
   status = 200
 
+[[redirects]]
+  from = "/articulos/hidratacion-y-sueno"
+  to = "/articles/hidratacion-y-sueno.html"
+  status = 200
+
 # SPA fallback — OBLIGATORIO para React Router
 # Debe ser la ÚLTIMA regla
 [[redirects]]
